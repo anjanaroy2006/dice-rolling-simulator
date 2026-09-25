@@ -1,0 +1,21 @@
+#dice rolling simulator
+
+import random
+
+c=0
+while True:
+    a=input("\nDo you want to roll a pair of dice?(Y/N) :")
+    if (a.lower()=='y'):
+        s=int(input("How many pairs ?:"))
+        for i in range(0,s,1):
+            d1=random.randint(1,6)
+            d2=random.randint(1,6)
+            print('(',d1,',',d2,')')
+            c=c+1;
+        
+    elif (a.lower()=='n'):
+        print("Thanks for playing!!")
+        print("Total pair thrown :",c," times")
+        break
+    else:
+        print("Invalid Choice!!")
